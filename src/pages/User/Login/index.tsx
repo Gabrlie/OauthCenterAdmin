@@ -142,6 +142,7 @@ const Login: React.FC = () => {
           title={'江汉大学授权中心'}
           subTitle={` `}
           onFinish={async (values) => {
+            values.token = captchaToken;
             await handleSubmit(values as API.LoginParams);
           }}
         >
